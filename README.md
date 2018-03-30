@@ -57,6 +57,22 @@ File id_rsa.pub you can share, just send it to admin or copy it to promts  that 
 
 ![cat](http://storage6.static.itmages.com/i/18/0330/h_1522402442_4778257_a2c33c28c4.png)
 
+If you already have password access to the server you can add own key to 
+`~/.ssh/authorized_keys` via next command:
+
+> `cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
+
+Also you can completely turn off password Authentication, just set:
+
+> `PasswordAuthentiction no`
+
+in `/etc/ssh/sshd_config`
+
+and then reload ssh demon:
+
+> `sudo service ssh reload`
+
+*You always can find a lot of new commands/options with help of `man` command, it's a bread and butter in learning Linux.*
 ### Windows
 
 *You can try this [guide](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/), MS somehow added some Linux coreutils inside their OS, so you can use guide for Linux,  but I will also cover more convention way to use SSH on Windows via PuTTY*
