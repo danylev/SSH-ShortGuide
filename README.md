@@ -16,6 +16,7 @@ Secure Shell (better known as SSH) is a cryptographic network protocol which all
 
 Generating a key pair provides you with two long string of characters: a public and a private key. You can place the public key on any server, and then unlock it by connecting to it with a client that already has the private key. When the two match up, the system unlocks without the need for a password. You can increase security even more by protecting the private key with a passphrase.
 
+
 ## Quick Guide on how to generate ssh keys
 
 ### Linux/OS X
@@ -56,6 +57,10 @@ Now in your /home/username/.ssh/ folder you will have atleast two files:
 File id_rsa.pub you can share, just send it to admin or copy it to promts  that need your private key. You always can copy it from console, just use `cat` comand:
 
 ![cat](http://storage6.static.itmages.com/i/18/0330/h_1522402442_4778257_a2c33c28c4.png)
+
+SSH into your server via next command:
+
+> `ssh your_user@your_server_ip_or_domain`
 
 If you already have password access to the server you can add own key to 
 `~/.ssh/authorized_keys` via next command:
